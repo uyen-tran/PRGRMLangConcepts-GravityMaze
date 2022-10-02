@@ -115,3 +115,80 @@ The semantics of a properly formatted Maze Game encoding are:
 4. c, cc, and 180 must each appear at least once in the Moves.
 
 5. Extra Credit (10 points or Honors contract): The goal must not be adjacent to an x symbol (considering only the up, down, left, and right directions).
+
+## 2 Output
+
+### 2.1 Scanner
+Your .g4 file should produce output for both correctly formatted files and incorrectly formatted files. For the correctly formatted file in Figure 1, the output would have the form of the output presented in Figure 2.
+
+Open Section: \begin{section}
+
+Section Title: \title{Moves}
+
+Designation: ::
+
+Open Moves: \begin{moves}
+
+Move: cc
+
+...
+
+Move: c
+
+Close Moves: \end{moves}
+
+Close Section: \end{section}
+
+Open Section: \begin{section}
+
+Section Title: \title{Maze}
+
+Designation: ::
+
+Open Maze: \begin{maze}
+
+Location: x
+
+...
+
+Location: x
+
+Close Row: \\
+
+Location: x
+
+...
+
+Location: x
+
+Close Maze: \end{maze}
+
+Close Section: \end{section}
+
+Close of File
+
+Figure 2: Truncated Output of Scanner for File in Figure 1
+
+For a correctly formatted file in Part 2, the output would be: This game has p players. where p is the number of players in the Maze . For the file in Figure 1, the output would be This game has 2 players.
+
+**2.1.1 Invalid Syntax & Semantics in Parsing**
+For invalid Maze Game encodings in Part 2, a message describing the error should be displayed. For a syntax error (violation of the syntax rules), the output
+Something unexpected happened on Line L. should be displayed, where L is the line number where parsing stopped. For that error, the parser should stop processing the file. For a semantic rule violation,
+the output
+
+The semantic rule R was violated. should be displayed, where R is the number of the rule (from
+List 1.3) that was violated, but parsing should continue.
+Syntax errors in Part 2 should be reported in the syntaxError method of
+csce322hw01pt02error.java.
+
+## 3 Naming Conventions
+The ANTLR file for the first part of the assignment should be named csce322hw01pt01.g4. The ANTLR file for the second part of the assignment should be named csce322hw01pt02.g4. Both grammars should contain a start rule named gravityGame. The Java file for the second part of the assignment should be named csce322hw01pt02error.java.
+
+## 4 webgrader
+The webgrader is available for this assignment. You can test your submitted files before the deadline by submitting them on webhandin and going to http://cse.unl.edu/ ̃cse322/grade, choosing the correct assignment and entering your cse.unl.edu credentials.
+
+The script should take approximately 2 minutes to run and produce a PDF.
+
+### 4.1 The Use of diff
+Because Part 1 of this assignment only depends on the symbols in the file, the order in which they are displayed should not be submission dependent. Therefore, diff will be used to compare the output of a particular submission against the output of the solution implementation.
+In Part 2, output will be sorted (and duplicate lines removed), so diff will also be used to compared submission and solution output.
