@@ -4,14 +4,13 @@
 
 ## 1 Instructions
 
-In this assignment, you will be required to scan, parse, and check the semantics of a file that encodes
-the state of a variation of Gravity Maze. The definition of a properly formatted input file is given in
-Section 1.1.
+In this assignment, you will be required to scan, parse, and check the semantics of a file that encodes the state of a variation of Gravity Maze. The definition of a properly formatted input file is given in Section 1.1.
+
 You will be submitting one .java file and two .g4 (ANTLR) files via web hand-in.
 
 ### 1.1 File Specification
 
-• The file contains two (2) labeled sections: Maze and Moves . Each section is enclosed by start and end tags (\begin{section} and \end{section}, respectively). The value of the section is set by the :: assignment operator.
+• The file contains two (2) labeled sections: Maze and Moves. Each section is enclosed by start and end tags (\begin{section} and \end{section}, respectively). The value of the section is set by the :: assignment operator.
 
 • Moves is an tilde-separated (~) list of move values that appear between \begin{moves} and \end{moves}. Valid moves are c (Clockwise rotation), cc (Counterclockwise rotation), and 180 (180 degree rotation).
 
