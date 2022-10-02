@@ -1,4 +1,4 @@
-# Programming Language Concepts - GravityMaze
+# Programming Language Concepts - Gravity Maze
 
 **Homework 01** (Due: Friday, March 5,2021,11 : 59 : 00PM)
 
