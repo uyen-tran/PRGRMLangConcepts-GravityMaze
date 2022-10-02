@@ -172,6 +172,7 @@ Figure 2: Truncated Output of Scanner for File in Figure 1
 For a correctly formatted file in Part 2, the output would be: This game has p players. where p is the number of players in the Maze . For the file in Figure 1, the output would be This game has 2 players.
 
 **2.1.1 Invalid Syntax & Semantics in Parsing**
+
 For invalid Maze Game encodings in Part 2, a message describing the error should be displayed. For a syntax error (violation of the syntax rules), the output
 Something unexpected happened on Line L. should be displayed, where L is the line number where parsing stopped. For that error, the parser should stop processing the file. For a semantic rule violation,
 the output
